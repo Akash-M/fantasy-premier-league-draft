@@ -1,0 +1,10 @@
+### Environment variables
+# Create http-client.env.json or http-client.private.env.json for sensitive data
+
+### GET request for PL players
+GET https://www.whoscored.com/statisticsfeed/1/getplayerstatistics?category=xg-stats&subcategory=summary&statsAccumulationType=0&isCurrent=true&playerId=&teamIds=&matchId=&stageId=23400&tournamentOptions=2&sortBy=Rating&sortAscending=&age=&ageComparisonType=&appearances=&appearancesComparisonType=&field=Overall&nationality=&positionOptions=&timeOfTheGameEnd=&timeOfTheGameStart=&isMinApp=true&page=1&includeZeroValues=&numberOfPlayersToPick=1000&incPens=false
+
+### GET request for Championship players
+GET https://www.whoscored.com/statisticsfeed/1/getplayerstatistics?category=summary&subcategory=all&statsAccumulationType=0&isCurrent=true&playerId=&teamIds=&matchId=&stageId=23427&tournamentOptions=7&sortBy=Rating&sortAscending=&age=&ageComparisonType=&appearances=&appearancesComparisonType=&field=Overall&nationality=&positionOptions=&timeOfTheGameEnd=&timeOfTheGameStart=&isMinApp=true&page=&includeZeroValues=&numberOfPlayersToPick=1000000&incPens=
+
+

@@ -1,0 +1,82 @@
+We are preparing an analysis to help us prepare for a fantasy premier league draft game.
+
+--------------
+The game rules are as follows:
+You will draft a squad of 15 players in the following positions:
+
+2 Goalkeepers
+5 Defenders
+5 Midfielders
+3 Forwards
+Each Premier League player can only be in one manager's squad in your league.
+
+Pre Draft
+Before the draft takes place you are able to create a priority watchlist of players. This list can help quickly
+identify potential picks during the draft and will also be used to automatically draft a player if you aren't
+available to participate.
+
+Draft Start
+The draft will automatically start at the designated time if the minimum number of teams has been met. A random order
+will be generated which will "snake" from round to round during the 15 rounds of the draft. In a snake draft the pick
+order is reversed each round, for example:
+
+Round 1: Team A, Team B, Team C, Team D
+Round 2: Team D, Team C, Team B, Team A
+Round 3: Team A, Team B, Team C, Team D
+Round 4: Team D, Team C, Team B, Team A
+etc...
+During The Draft
+Depending on private league settings, you will be given between 30 and 120 seconds (default 90) to pick a player for
+your squad. If you fail to pick a player within the time limit then the following criteria will be used to make an
+automatic pick:
+
+Select the highest priority player from your watchlist who is both available and in a position you still require.
+Select the highest ranked available player in the draft list in a position you still require.
+If an automatic pick is made then you will be marked as being offline and picks will be automatically made in
+subsequent rounds. You can mark yourself online again in the draft room to resume manual drafting.
+--------------
+
+In the premier-league-all-stats.json files, we have player data from the 2024/2025 season. Let's make use of the
+historical data to create a watchlist of players that we can use for the draft.
+
+Below is the context regarding what each property in the player entries means:
+- name: name of the player
+- positionText: the position the player played in last season
+- age: age of the player (remember that for this season, we would have to increment it by 1)
+- teamName: the name of the team the player played
+- rating: average rating of how well the player performed in the season based on analysis done by experts
+- minsPlayed: total minutes played by the player in the season
+- playedPositions: some players play in multiple positions, this is a list of all the positions they played in
+- apps: total number of appearances made by the player in the season
+- subOn: total number of times the player was substituted on
+- goal: number of goals scored by the player
+- totalShots: total number of shots taken by the player in the season
+- xG: expected goals, a metric that estimates the quality of chances a player had
+- xGDiff: expected goals difference, which is the difference between expected goals and actual goals scored
+- xGPerNinety: expected goals per ninety minutes played, a measure of scoring efficiency
+- xGPerShot: expected goals per shot taken, another measure of scoring efficiency
+
+--------------
+
+Expected outcome:
+
+We would like to have the analysis.md file with the following information:
+- we would like to have a watchlist of players that we can use for the draft
+- we should create 3 groups based on the positionText of the players:
+  - Goalkeepers
+  - Defenders
+  - Midfielders
+  - Forwards
+- separate each group by a separator line
+- for each group, we should sort the players based on the following criteria:
+  - rating (descending)
+  - minsPlayed (descending)
+  - minsPlayed (descending)
+  - apps (descending)
+  - subOn (ascending)
+  - goal (descending)
+  - totalShots (descending)
+  - xG (descending)
+  - xGDiff (descending)
+  - xGPerNinety (descending)
+  - xGPerShot
